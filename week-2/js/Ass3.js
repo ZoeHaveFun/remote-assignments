@@ -21,5 +21,6 @@ function avg(data) {
   for (let i = 0; i < car.length; i++) {
     total = total + car[i].price
   }
-  console.log("Ass3->", total);
+  let average = total / car.length
+  console.log("Ass3->", average);
 }
