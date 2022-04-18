@@ -12,14 +12,14 @@ function ajax(src, callback) {
 }
 
 function render(data) {
-  for (let i = 0; i < data.length; i++) {
+  data.forEach(item => {
     let tr = document.createElement("tr")
     let template = `
-      <th>${data[i].name}</th>
-      <th>${data[i].price}</th>
-      <th>${data[i].description}</th>
+      <th>${item.name}</th>
+      <th>${item.price}</th>
+      <th>${item.description}</th>
     `
     tr.insertAdjacentHTML("afterbegin", template)
     document.querySelector("tbody").appendChild(tr)
-  }
+  });
 }
